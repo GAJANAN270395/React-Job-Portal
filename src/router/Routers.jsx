@@ -11,10 +11,10 @@ const Routers = ()=>{
    
      <Routes>
        <Route path="/" element={<Navigate to="/home"/>} />
-       <Route path="/login" element={<Home/>} />
+       <Route path="/" element={<Home/>} />
        <Route path="/login" element={<Login/>} />
-       <Route path="/login" element={<Register/>} />
-       <Route path="/login" element={<SingleJobDetails/>} />
+       <Route path="/register" element={<Register/>} />
+       <Route path="/job/:id" element={<SingleJobDetails/>} />
      </Routes>
   
   ) 
