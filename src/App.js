@@ -1,13 +1,13 @@
 import React from "react";
 import {Button} from 'reactstrap';
+import Layout from "./components/layout/Layout";
 import "./styles/style.scss";
 
 const App =()=>{
   return(
-    <>
-    <h1>Job Portal</h1>
-    <Button className="btn primary__btn">Hello</Button>
-    </>
+      
+    <Layout/>
+    
   )
 }
 export default App;
