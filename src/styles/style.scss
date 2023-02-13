@@ -1,0 +1,34 @@
+@import "./variables";
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+}
+body{
+  font-family: $font-name;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  color: $heading-color;
+}
+a{
+  text-decoration: none;
+}
+.primary__btn{
+  background: $secondary-color;
+  border: none !important;
+  border-radius: 50px !important;
+  padding: 0.4rem 1.5rem !important;
+  color: #fff;
+  font-family: $font-name;
+}
+.primary_btn a:hover{
+  color: inherit;
+}
