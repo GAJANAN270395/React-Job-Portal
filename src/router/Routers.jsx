@@ -8,7 +8,6 @@ import SingleJobDetails from "../pages/SingleJobDetails";
 
 const Routers = ()=>{
   return(
-   
      <Routes>
        <Route path="/" element={<Navigate to="/home"/>} />
        <Route path="/" element={<Home/>} />
