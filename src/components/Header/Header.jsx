@@ -48,6 +48,16 @@ const Header = ()=>{
 })}
           </ul>
         </div>
+        <div className="nav__right d-flex align-items-center gap-4">
+          <div className="nav__btn">
+            <Button className="btn primary__btn">
+              <Link to="/login">Login</Link>
+            </Button>
+            <Button className="btn primary__btn">
+              <Link to="/register">Register</Link>
+            </Button>
+          </div>
+        </div>
       </div>
      </Row>
    </Container>

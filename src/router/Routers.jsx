@@ -4,7 +4,7 @@ import Home from "./../pages/Home";
 import Login from "./../pages/Login";
 import Register from "./../pages/Register";
 import SingleJobDetails from "./../pages/SingleJobDetails";
-
+import Job from "./../pages/Job";
 
 const Routers = ()=>{
   return(
