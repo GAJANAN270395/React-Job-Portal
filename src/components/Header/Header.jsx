@@ -11,7 +11,7 @@ const nav_links = [
   },
   {
     path: "/jobs",
-    display: "Jobs",
+    display: "Jobs", 
   },
   {
     path: "/login",
