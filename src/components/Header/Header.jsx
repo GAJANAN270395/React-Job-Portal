@@ -3,7 +3,6 @@ import React from "react";
 import {Container, Row, Button} from "reactstrap"
 import {NavLink, Link} from "react-router-dom"
 import './Header.scss';
-import {logo} from 
 
 const nav_links = [
   {
@@ -30,6 +29,9 @@ const Header = ()=>{
    <Container>
      <Row>
       <div className=".nav_wrapper.d-flex align-items center justify-content-between">
+        <div className="logo">
+          <img src="" alt=""/>
+        </div>
       </div>
      </Row>
    </Container>
