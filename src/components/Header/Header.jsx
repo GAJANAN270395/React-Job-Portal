@@ -34,7 +34,7 @@ const Header = ()=>{
           <img src="https://stackblitz.com/files/react-qhxfxm/github/GAJANAN270395/React-Job-Portal/main/src/assets/logo.png" alt=""/>
         </div>
         <div className="navigation">
-          <ul className="menu d-flex align-item-center gap-5">
+          <ul className="menu d-flex align-items-center gap-5">
 {nav_links.map((item, index)=>{
   <li className="nav__item">
      <NavLink
