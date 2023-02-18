@@ -1,47 +1,59 @@
-
-import React from "react";
-import {Container,  Button} from "react-bootstrap"
-import {NavLink,Link} from "react-router-dom"
-import './Header.scss';
+import React, { useRef, useEffect } from "react";
 import logo from "../../assets/images/logo.png";
-
-const navLinks=[
+import classes from "./Header.module.scss";
+import { Link, NavLink } from "react-router-dom";
+const navLinks = [
   {
-    path:"/jobs",
-    display:"Search Job"
+    path: "/jobs",
+    display: "Search Job",
   },
   {
-  path:"/internship",
-  display:"Internship"
+    path: "/internship",
+    display: "Internship",
   },
   {
-    path:"/post-job",
-    display: "Post a job"
-  }
-]
+    path: "/employer",
+    display: "Post a job",
+  },
+];
 
-const Header = ()=>{
-  return(
-      <header className="header">
-    <Container>
-      <div className="left_menu_section">
-       <div className="logo">
-         <Link to="/">
-           <img src="https://stackblitz.com/files/react-qhxfxm/github/GAJANAN270395/React-Job-Portal/main/src/assets/logo.png" alt="" className="logo_img"/>
-         </Link>
-       </div>
-      </div>
-      <div className="right_menu_section">
-        <ul className="nav_menu">
-           {navLinks.map((item, index)=>(
-             <li className="nav_item">
-             <NavLink to={item.path} >{item.display}</NavLink>
-             </li>
-           ))}
+const Header = () => {
+  const headerRef = useRef(null);
+  useEffect(() => {
+    stickyHeaderFunc();
+    return window.removeEventListener("scroll", stickyHeaderFunc);
+  }, []);
+  const stickyHeaderFunc = () => {
+    window.addEventListener("scroll", () => {
+      console.log("Scroll");
+      if (document.body.scrollTop > 80) {
+        headerRef.current.classList.add(`{classes.sticky__header}`);
+      } else {
+        headerRef.current.classList.remove("sticky__header");
+      }
+    });
+  };
+
+  return (
+    <header className={classes.header} ref={headerRef}>
+      <div className={classes.container}>
+        <div className={classes.logo}>
+          <Link to={"/"}>
+            <img src="https://stackblitz.com/files/react-qhxfxm/github/GAJANAN270395/React-Job-Portal/main/src/assets/logo.png" alt="Logo" />
+          </Link>
+        </div>
+        <div className={classes.right_menu}>
+          <ul className={classes.menuList}>
+            {navLinks.map((item, index) => (
+              <li key={index}>
+                <NavLink to={item.path}>{item.display}</NavLink>
+              </li>
+            ))}
           </ul>
+        </div>
       </div>
-    </Container>
-      </header>
-  )
-}
+    </header>
+  );
+};
+
 export default Header;
